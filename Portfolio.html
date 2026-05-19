@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Rita Rabia – Étudiante BTS SIO SISR, passionnée par la cybersécurité, les réseaux et les systèmes.">
+  <title>Rita Rabia · Portfolio BTS SIO SISR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== CURSOR ========== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ========== PARTICLES ========== -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-text">RR</span>
+      <div class="brand-dot"></div>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#apropos" class="nav-link">À propos</a></li>
+      <li><a href="#experiences" class="nav-link">Expériences</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="https://github.com/jebliya" class="nav-link nav-social" target="_blank" rel="noopener" id="nav-github">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/rita-rabia-aa9246355" class="nav-link nav-social nav-linkedin" target="_blank" rel="noopener" id="nav-linkedin">LinkedIn</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="hero" id="hero">
+    <div class="hero-grid">
+      <div class="hero-copy" data-aos>
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Étudiante BTS SIO · Option SISR
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line">Rita</span>
+          <span class="title-line gradient-text">Rabia</span>
+        </h1>
+        <p class="hero-subtitle">Future ingénieure en <strong>cybersécurité</strong> — systèmes, réseaux &amp; infrastructure IT.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="cv/CV ATS 1.pdf" target="_blank" id="btn-cv">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Mon CV
+          </a>
+          <a class="btn btn-outline" href="#experiences" id="btn-exp">
+            Explorer mes expériences
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-value counter" data-target="4">0</span>
+            <span class="stat-label">Expériences</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-value counter" data-target="5">0</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-value">3</span>
+            <span class="stat-label">Langues</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" data-aos>
+        <div class="profile-ring">
+          <div class="profile-card">
+            <img src="Images/Photo unique.jpeg" alt="Photo de Rita Rabia" class="profile-img">
+            <div class="profile-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Disponible
+            </div>
+            <!-- NOTE POUR RITA : Sauvegardez la photo de vous en hijab que vous m'avez envoyée dans le dossier "Images" avec le nom exact "photo-cv.jpeg" pour qu'elle s'affiche ici ! -->
+          </div>
+          <div class="orbit orbit-1"><div class="orbit-dot"></div></div>
+          <div class="orbit orbit-2"><div class="orbit-dot"></div></div>
+        </div>
+        <div class="floating-tags">
+          <div class="ftag ftag-1">🔐 Cyber</div>
+          <div class="ftag ftag-2">🌐 Réseaux</div>
+          <div class="ftag ftag-3">🐧 Linux</div>
+          <div class="ftag ftag-4">⚡ SISR</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== À PROPOS ========== -->
+    <section id="apropos" class="section">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-number">01</span>
+          <h2 class="section-title">À propos de moi</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text" data-aos>
+            <p>Depuis le lycée, j'ai toujours été attirée par l'informatique, tout en développant un intérêt fort pour l'histoire, la géopolitique et la cyberpolitique. J'ai choisi des spécialités orientées sciences humaines, puis j'ai fait une année de médecine par curiosité et goût du défi.</p>
+            <p style="margin-top:14px;">Le déclic est arrivé lors de mon stage à l'<strong>École 42</strong> en 2025. J'y ai découvert un environnement technique stimulant et compris que l'informatique serait mon vrai projet d'avenir. Aujourd'hui, je vise un parcours solide en systèmes, réseaux et cybersécurité, avec l'ambition de devenir <strong>ingénieure en cybersécurité</strong>.</p>
+          </div>
+          <div class="about-cards" data-aos>
+            <div class="info-card" id="info-objective">
+              <div class="info-icon">🎯</div>
+              <div>
+                <strong>Objectif</strong>
+                <p>Ingénieure cybersécurité</p>
+              </div>
+            </div>
+            <div class="info-card" id="info-formation">
+              <div class="info-icon">🎓</div>
+              <div>
+                <strong>Formation</strong>
+                <p>BTS SIO SISR 2025–2026</p>
+              </div>
+            </div>
+            <div class="info-card" id="info-langues">
+              <div class="info-icon">🌍</div>
+              <div>
+                <strong>Langues</strong>
+                <p>Français · Arabe · Anglais</p>
+              </div>
+            </div>
+            <div class="info-card" id="info-localisation">
+              <div class="info-icon">📍</div>
+              <div>
+                <strong>Localisation</strong>
+                <p>France · Mobilité totale</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PARCOURS ========== -->
+    <section id="parcours" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-number">02</span>
+          <h2 class="section-title">Mon Parcours</h2>
+        </div>
+        <div class="timeline" data-aos>
+          <div class="timeline-item" id="tl-lycee">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">Lycée</span>
+              <h3>Baccalauréat Général</h3>
+              <p>HGGSP, SES, option DNL · Préparation Sciences Po Paris · Intérêt marqué pour la géopolitique et le numérique.</p>
+            </div>
+          </div>
+          <div class="timeline-item" id="tl-medecine">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">Après le bac</span>
+              <h3>Médecine – L'art du challenge</h3>
+              <p>Année de médecine portée par la curiosité et le goût du défi intellectuel. Une expérience qui forge la rigueur.</p>
+            </div>
+          </div>
+          <div class="timeline-item" id="tl-42">
+            <div class="tl-dot tl-dot-accent"></div>
+            <div class="tl-content tl-content-accent">
+              <span class="tl-year">2025</span>
+              <h3>⚡ Déclic – École 42 Paris</h3>
+              <p>Stage décisif. Découverte du code, de la logique technique et de l'environnement professionnel IT. Le tournant de mon parcours.</p>
+            </div>
+          </div>
+          <div class="timeline-item" id="tl-bts">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2025 – 2026</span>
+              <h3>BTS SIO option SISR</h3>
+              <p>Systèmes, réseaux, sécurité, Java, développement. Formation complète orientée infrastructure et cyberdéfense.</p>
+            </div>
+          </div>
+          <div class="timeline-item" id="tl-maroc">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2026</span>
+              <h3>Maroc – Stage & Hackathon</h3>
+              <p>Stage à l'Académie de l'Éducation Nationale · Service civique · Hackathon à l'ESISA Fès (école orientée IA).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FORMATION ========== -->
+    <section id="formation" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-number">03</span>
+          <h2 class="section-title">Ma Formation – BTS SIO SISR</h2>
+        </div>
+        <div class="formation-grid" data-aos>
+          <div class="formation-intro">
+            <p>Le <strong>BTS Services Informatiques aux Organisations (SIO)</strong> forme des techniciens supérieurs capables de répondre aux besoins informatiques des entreprises. L'option <strong>SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</strong> est orientée vers la gestion, la sécurisation et l'optimisation des systèmes d'information.</p>
+            <p style="margin-top:12px">En 2 ans, la formation couvre les systèmes, les réseaux, la cybersécurité, la virtualisation et le développement — avec des périodes de stage en entreprise pour mettre en pratique les compétences acquises.</p>
+          </div>
+          <div class="formation-blocks">
+            <div class="formation-block" id="fb-sisr">
+              <div class="fb-icon">🌐</div>
+              <div>
+                <strong>Systèmes &amp; Réseaux</strong>
+                <p>Administration Windows Server, Linux Debian, Active Directory, DHCP, DNS, Cisco CLI</p>
+              </div>
+            </div>
+            <div class="formation-block" id="fb-secu">
+              <div class="fb-icon">🔐</div>
+              <div>
+                <strong>Cybersécurité</strong>
+                <p>Pare-feu, sécurisation des postes, gestion des accès, sensibilisation aux risques</p>
+              </div>
+            </div>
+            <div class="formation-block" id="fb-gestion">
+              <div class="fb-icon">🖥️</div>
+              <div>
+                <strong>Gestion de parc</strong>
+                <p>OCS Inventory, GLPI, gestion des tickets d'incident, inventaire et maintenance</p>
+              </div>
+            </div>
+            <div class="formation-block" id="fb-dev">
+              <div class="fb-icon">💻</div>
+              <div>
+                <strong>Services Web &amp; BDD</strong>
+                <p>Apache 2 (Debian), MariaDB, HTML/CSS/JavaScript, Python, Bash</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MÉTIERS ========== -->
+    <section id="metiers" class="section">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-number">04</span>
+          <h2 class="section-title">Métiers Visés</h2>
+        </div>
+        <div class="metiers-grid" data-aos>
+          <article class="metier-card metier-featured" id="metier-cyber">
+            <div class="metier-icon">🛡️</div>
+            <div class="metier-badge">Priorité 1</div>
+            <h3>Analyste en Cybersécurité</h3>
+            <p>Protéger les systèmes d'information contre les cybermenaces, analyser les incidents, mettre en place des politiques de sécurité et assurer la veille sur les nouvelles vulnérabilités.</p>
+            <div class="metier-skills">
+              <span>SIEM</span><span>Pentest</span><span>Pare-feu</span><span>Forensics</span>
+            </div>
+          </article>
+          <article class="metier-card" id="metier-admin">
+            <div class="metier-icon">🖥️</div>
+            <div class="metier-badge">Priorité 2</div>
+            <h3>Administrateur Systèmes &amp; Réseaux</h3>
+            <p>Gérer, configurer et maintenir l'infrastructure IT d'une organisation : serveurs, commutateurs, routeurs, services réseau et sauvegardes.</p>
+            <div class="metier-skills">
+              <span>Windows Server</span><span>Linux</span><span>Cisco</span><span>VPN</span>
+            </div>
+          </article>
+          <article class="metier-card" id="metier-ingenieur">
+            <div class="metier-icon">🚀</div>
+            <div class="metier-badge">Objectif long terme</div>
+            <h3>Ingénieure en Cybersécurité</h3>
+            <p>Concevoir et piloter des architectures de sécurité pour des systèmes complexes, diriger des audits de sécurité et contribuer à la cyberdéfense nationale.</p>
+            <div class="metier-skills">
+              <span>Architecture SI</span><span>Audit</span><span>ANSSI</span><span>Cryptographie</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPÉRIENCES & ARCHITECTURES ========== -->
+    <section id="experiences" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-number">03</span>
+          <h2 class="section-title">Expériences & Architectures</h2>
+        </div>
+        
+        <div class="exp-tabs-wrapper" data-aos>
+          <!-- Navigation des onglets -->
+          <div class="exp-tabs-nav">
+            <button class="exp-tab-btn active" data-tab="tab-cvats">
+              <span class="tab-icon">📄</span> Mon Profil (CV ATS)
+            </button>
+            <button class="exp-tab-btn" data-tab="tab-pro">
+              <span class="tab-icon">💼</span> Expériences Pro
+            </button>
+            <button class="exp-tab-btn" data-tab="tab-schemas">
+              <span class="tab-icon">🌐</span> Architectures Réseaux
+            </button>
+          </div>
+
+          <div class="exp-tabs-content">
+            <!-- ONGLET 1 : CV ATS 1 -->
+            <div class="exp-tab-pane active" id="tab-cvats">
+              <div class="cv-ats-layout">
+                <div class="cv-ats-main">
+                  <h3>Profil Technique SISR</h3>
+                  <p class="cv-ats-subtitle">Administratrice Systèmes & Réseaux / Cybersécurité</p>
+                  <p>Voici les éléments clés issus de mon <strong>CV ATS 1</strong>. Passionnée par l'infrastructure et la sécurité, je conçois et maintiens des environnements IT performants et sécurisés.</p>
+                  <ul class="exp-list cv-ats-list">
+                    <li><strong>Administration Système :</strong> Déploiement et gestion d'environnements Windows Server et Linux.</li>
+                    <li><strong>Réseau & Routage :</strong> Configuration d'équipements Cisco, segmentation VLANs, routage dynamique et statique.</li>
+                    <li><strong>Sécurité :</strong> Mise en place de règles pare-feu, audits de sécurité, sensibilisation aux cybermenaces.</li>
+                    <li><strong>Supervision :</strong> Monitoring en temps réel, gestion des incidents et automatisation de tâches d'administration via scripts Bash/PowerShell.</li>
+                  </ul>
+                  <div class="exp-tags mt-15">
+                    <span>Active Directory</span><span>Cisco</span><span>Linux</span><span>Cybersécurité</span><span>VLAN</span>
+                  </div>
+                </div>
+                <div class="cv-ats-side">
+                  <div class="glass-card">
+                    <div class="glass-icon pulse-icon">🎯</div>
+                    <h4>Objectif</h4>
+                    <p>Recherche d'opportunités en alternance pour mettre en pratique mes compétences en <strong>cybersécurité</strong> et <strong>réseaux</strong> au sein d'une infrastructure exigeante.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ONGLET 2 : EXPÉRIENCES PRO -->
+            <div class="exp-tab-pane" id="tab-pro">
+              <div class="exp-grid">
+
+          <!-- École 42 -->
+          <article class="exp-card exp-card-featured" id="exp-42">
+            <div class="exp-img-wrap">
+              <img src="Images/École 42.jpeg" alt="École 42 Paris" class="exp-img">
+              <div class="exp-img-overlay"></div>
+              <div class="exp-img-label">⚡ École 42 Paris</div>
+            </div>
+            <div class="exp-body">
+              <div class="exp-meta">
+                <span class="exp-type">Stage · Découverte</span>
+                <span class="exp-date">2025</span>
+              </div>
+              <h3>École 42 Paris</h3>
+              <p>Stage au sein de l'École 42, école innovante fondée sur la pédagogie par projets et le peer-learning. J'y ai découvert l'environnement professionnel IT, la logique de développement et la culture du monde informatique. Ce stage a été le tournant décisif qui m'a orientée vers une carrière en systèmes et cybersécurité.</p>
+              <ul class="exp-list">
+                <li>Immersion dans un environnement de développement professionnel</li>
+                <li>Initiation à la logique algorithmique et à la résolution de problèmes</li>
+                <li>Découverte de la culture open source et du travail collaboratif</li>
+              </ul>
+              <div class="exp-tags">
+                <span>Logique</span><span>Peer-learning</span><span>Open source</span><span>Culture IT</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service Civique -->
+          <article class="exp-card" id="exp-civique">
+            <div class="exp-img-wrap">
+              <img src="Images/Service Civique.jpeg" alt="Service Civique" class="exp-img">
+              <div class="exp-img-overlay"></div>
+              <div class="exp-img-label">🏫 Service Civique</div>
+            </div>
+            <div class="exp-body">
+              <div class="exp-meta">
+                <span class="exp-type">Service Civique</span>
+                <span class="exp-date">2025–2026</span>
+              </div>
+              <h3>Service Civique – Établissement Scolaire (France)</h3>
+              <p>Mission de service civique axée sur le numérique au sein d'un établissement scolaire. J'ai contribué à la gestion et à l'optimisation du parc informatique tout en sensibilisant les élèves et le personnel aux bonnes pratiques numériques.</p>
+              <ul class="exp-list">
+                <li>Inventaire, configuration et optimisation du parc informatique</li>
+                <li>Support technique de premier niveau auprès des utilisateurs</li>
+                <li>Sécurisation des postes de travail et gestion des comptes</li>
+                <li>Sensibilisation aux risques cyber et aux usages numériques responsables</li>
+              </ul>
+              <div class="exp-tags">
+                <span>Support IT</span><span>Réseau</span><span>Sécurité postes</span><span>Sensibilisation</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage Maroc -->
+          <article class="exp-card" id="exp-academie">
+            <!-- Gallery slider -->
+            <div class="exp-gallery" id="gallery-maroc">
+              <div class="gallery-main">
+                <div class="gallery-slide active" data-type="img">
+                  <img src="Images/Baie informatique.jpeg" alt="Baie informatique – Stage Maroc" class="gallery-main-img">
+                </div>
+                <div class="gallery-slide" data-type="img">
+                  <img src="Images/Stage Maorc 1.jpeg" alt="Stage Maroc" class="gallery-main-img">
+                </div>
+                <div class="gallery-slide" data-type="img">
+                  <img src="Images/Serveur.jpeg" alt="Serveur – Stage Maroc" class="gallery-main-img">
+                </div>
+                <div class="gallery-slide" data-type="video">
+                  <video class="gallery-main-video" controls preload="metadata">
+                    <source src="Images/video stage.mov" type="video/mp4">
+                    <source src="Images/video stage.mov" type="video/quicktime">
+                  </video>
+                </div>
+                <button class="gallery-arrow gallery-prev" onclick="galleryNav('gallery-maroc',-1)" aria-label="Précédent">&#8592;</button>
+                <button class="gallery-arrow gallery-next" onclick="galleryNav('gallery-maroc', 1)" aria-label="Suivant">&#8594;</button>
+                <div class="gallery-counter"><span class="gallery-cur">1</span> / <span class="gallery-tot">4</span></div>
+              </div>
+              <div class="gallery-thumbs">
+                <div class="gallery-thumb active" onclick="galleryGoto('gallery-maroc',0)">
+                  <img src="Images/Baie informatique.jpeg" alt="Baie informatique">
+                </div>
+                <div class="gallery-thumb" onclick="galleryGoto('gallery-maroc',1)">
+                  <img src="Images/Stage Maorc 1.jpeg" alt="Stage Maroc 1">
+                </div>
+                <div class="gallery-thumb" onclick="galleryGoto('gallery-maroc',2)">
+                  <img src="Images/Serveur.jpeg" alt="Serveur">
+                </div>
+                <div class="gallery-thumb gallery-thumb-video" onclick="galleryGoto('gallery-maroc',3)">
+                  <span class="thumb-play">▶</span>
+                  <span class="thumb-label">Vidéo</span>
+                </div>
+              </div>
+            </div>
+            <div class="exp-body">
+              <div class="exp-meta">
+                <span class="exp-type">Stage · 1 mois</span>
+                <span class="exp-date">2026</span>
+              </div>
+              <h3>Académie de l'Éducation Nationale – Maroc</h3>
+              <p>Stage d'un mois au sein du service informatique de l'Académie de l'Éducation Nationale du Maroc. Mission centrée sur la maintenance et la sécurisation d'un parc informatique institutionnel de grande envergure.</p>
+              <ul class="exp-list">
+                <li>Diagnostic et maintenance corrective des équipements informatiques</li>
+                <li>Sécurisation des postes et contrôle des accès utilisateurs</li>
+                <li>Participation à l'organisation et l'inventaire du parc IT</li>
+                <li>Observation des pratiques d'administration réseau en environnement réel</li>
+              </ul>
+              <div class="exp-tags">
+                <span>Sécurité</span><span>Maintenance</span><span>Administration</span><span>Réseau</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Hackathon -->
+          <article class="exp-card" id="exp-hackathon">
+            <div class="exp-img-wrap">
+              <img src="Images/Hackaton.jpeg" alt="Hackathon ESISA Fès" class="exp-img">
+              <div class="exp-img-overlay"></div>
+              <div class="exp-img-label">🏆 Hackathon ESISA</div>
+            </div>
+            <div class="exp-body">
+              <div class="exp-meta">
+                <span class="exp-type">Compétition</span>
+                <span class="exp-date">2026</span>
+              </div>
+              <h3>Hackathon – ESISA Fès (Maroc)</h3>
+              <p>Participation à un hackathon organisé par l'ESISA, grande école d'ingénierie orientée Intelligence Artificielle et nouvelles technologies. Travail en équipe pluridisciplinaire sur une problématique technique à résoudre en temps limité.</p>
+              <ul class="exp-list">
+                <li>Travail en équipe sous contrainte de temps et de ressources</li>
+                <li>Conception et prototypage d'une solution technique innovante</li>
+                <li>Présentation orale devant un jury de professionnels</li>
+              </ul>
+              <div class="exp-tags">
+                <span>IA</span><span>Teamwork</span><span>Prototype</span><span>Présentation</span>
+              </div>
+            </div>
+          </article>
+
+              </div>
+            </div>
+
+            <!-- ONGLET 3 : SCHÉMAS RÉSEAUX ANIMÉS -->
+            <div class="exp-tab-pane" id="tab-schemas">
+              <div class="schemas-wrapper">
+                <div class="schema-desc">
+                  <h3>Déploiement SISR : Architecture LAN Sécurisée</h3>
+                  <p>Exemple interactif de mes compétences en conception d'infrastructure. Ce schéma illustre le transit des données dans un réseau d'entreprise segmenté (VLANs), sécurisé par un pare-feu et géré par un serveur Active Directory.</p>
+                </div>
+                <div class="network-schema-container">
+                  <svg viewBox="0 0 800 450" class="network-svg" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                      <!-- Gradient pour les liens -->
+                      <linearGradient id="linkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="rgba(56,189,248,0.2)"/>
+                        <stop offset="100%" stop-color="rgba(99,102,241,0.5)"/>
+                      </linearGradient>
+                      <!-- Effet de lueur -->
+                      <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur stdDeviation="5" result="blur" />
+                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                      </filter>
+                    </defs>
+
+                    <!-- Lignes du réseau -->
+                    <path id="p-fw-sw" d="M400,80 L400,200" class="net-link" stroke="url(#linkGrad)" stroke-width="3" fill="none" />
+                    <path id="p-sw-ad" d="M400,200 L200,320" class="net-link" stroke="url(#linkGrad)" stroke-width="3" fill="none" />
+                    <path id="p-sw-vlan1" d="M400,200 L400,350" class="net-link" stroke="url(#linkGrad)" stroke-width="3" fill="none" />
+                    <path id="p-sw-vlan2" d="M400,200 L600,320" class="net-link" stroke="url(#linkGrad)" stroke-width="3" fill="none" />
+                    
+                    <!-- Packets Animés -->
+                    <circle r="4" class="packet p-red" fill="#ff5f56" filter="url(#glow)">
+                      <animateMotion dur="2.5s" repeatCount="indefinite"><mpath href="#p-fw-sw"/></animateMotion>
+                    </circle>
+                    <circle r="4" class="packet p-blue" fill="#38bdf8" filter="url(#glow)">
+                      <animateMotion dur="3s" repeatCount="indefinite"><mpath href="#p-sw-ad"/></animateMotion>
+                    </circle>
+                    <circle r="4" class="packet p-green" fill="#4ade80" filter="url(#glow)">
+                      <animateMotion dur="3.5s" repeatCount="indefinite"><mpath href="#p-sw-vlan1"/></animateMotion>
+                    </circle>
+                    <circle r="4" class="packet p-purple" fill="#c084fc" filter="url(#glow)">
+                      <animateMotion dur="2.8s" repeatCount="indefinite"><mpath href="#p-sw-vlan2"/></animateMotion>
+                    </circle>
+
+                    <!-- Noeuds (Équipements) -->
+                    <g class="net-node" transform="translate(400,80)">
+                      <circle r="35" class="node-bg" fill="rgba(15,23,42,0.9)" stroke="#38bdf8" stroke-width="2" />
+                      <text x="0" y="5" text-anchor="middle" font-size="24" class="node-icon">🧱</text>
+                      <text x="0" y="55" text-anchor="middle" fill="#e2eaf8" font-size="14" font-weight="600" class="node-label">Pare-feu (pfSense)</text>
+                    </g>
+                    <g class="net-node" transform="translate(400,200)">
+                      <circle r="35" class="node-bg" fill="rgba(15,23,42,0.9)" stroke="#818cf8" stroke-width="2" />
+                      <text x="0" y="5" text-anchor="middle" font-size="24" class="node-icon">🔀</text>
+                      <text x="0" y="55" text-anchor="middle" fill="#e2eaf8" font-size="14" font-weight="600" class="node-label">Switch L3 (Cœur)</text>
+                    </g>
+                    <g class="net-node" transform="translate(200,320)">
+                      <circle r="35" class="node-bg" fill="rgba(15,23,42,0.9)" stroke="#4ade80" stroke-width="2" />
+                      <text x="0" y="5" text-anchor="middle" font-size="24" class="node-icon">🗄️</text>
+                      <text x="0" y="55" text-anchor="middle" fill="#e2eaf8" font-size="14" font-weight="600" class="node-label">Serveur AD / DNS</text>
+                    </g>
+                    <g class="net-node" transform="translate(400,350)">
+                      <circle r="35" class="node-bg" fill="rgba(15,23,42,0.9)" stroke="#fbbf24" stroke-width="2" />
+                      <text x="0" y="5" text-anchor="middle" font-size="24" class="node-icon">💻</text>
+                      <text x="0" y="55" text-anchor="middle" fill="#e2eaf8" font-size="14" font-weight="600" class="node-label">VLAN 10 (Admin)</text>
+                    </g>
+                    <g class="net-node" transform="translate(600,320)">
+                      <circle r="35" class="node-bg" fill="rgba(15,23,42,0.9)" stroke="#f472b6" stroke-width="2" />
+                      <text x="0" y="5" text-anchor="middle" font-size="24" class="node-icon">🖥️</text>
+                      <text x="0" y="55" text-anchor="middle" fill="#e2eaf8" font-size="14" font-weight="600" class="node-label">VLAN 20 (Users)</text>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COMPÉTENCES ========== -->
+    <section id="competences" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-number">04</span>
+          <h2 class="section-title">Compétences</h2>
+        </div>
+        <div class="skills-categories" data-aos>
+          <div class="skill-category">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-icon">🖥️</span> Systèmes & OS
+            </h3>
+            <div class="skill-pills">
+              <span class="pill">Windows Server</span>
+              <span class="pill">Linux / Debian</span>
+              <span class="pill">Active Directory</span>
+              <span class="pill">Virtualisation</span>
+              <span class="pill">Shell / Bash</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-icon">🌐</span> Réseaux
+            </h3>
+            <div class="skill-pills">
+              <span class="pill">TCP/IP</span>
+              <span class="pill">DHCP</span>
+              <span class="pill">DNS</span>
+              <span class="pill">SSH</span>
+              <span class="pill">VPN</span>
+              <span class="pill">Switch / Routeur</span>
+              <span class="pill">Supervision</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-icon">🔐</span> Sécurité
+            </h3>
+            <div class="skill-pills">
+              <span class="pill">Pare-feu</span>
+              <span class="pill">Sécurité réseau</span>
+              <span class="pill">Sensibilisation</span>
+              <span class="pill">Cyberdéfense</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-cat-title">
+              <span class="skill-cat-icon">💻</span> Développement
+            </h3>
+            <div class="skill-pills">
+              <span class="pill">Python</span>
+              <span class="pill">HTML / CSS</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">Bash / Shell</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ========== CERTIFICATIONS ========== -->
+    <section id="certifications" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-number">05</span>
+          <h2 class="section-title">Certifications</h2>
+        </div>
+        <div class="cert-grid" data-aos>
+          <article class="cert-card" id="cert-js">
+            <div class="cert-img-wrap">
+              <img src="Images/JS-EPG.jpeg" alt="Certification JavaScript EPG" class="cert-img">
+              <div class="cert-img-overlay"></div>
+            </div>
+            <div class="cert-header">
+              <div class="cert-badge">JS</div>
+              <span class="cert-status cert-done">Obtenu</span>
+            </div>
+            <h3>JavaScript – Par passion</h3>
+            <p class="cert-org">EPG Maroc</p>
+            <p>Certification obtenue par curiosité et plaisir personnel, en dehors de ma formation. Initiation au développement web et à la logique de programmation côté client.</p>
+          </article>
+          <article class="cert-card" id="cert-senscyber">
+            <div class="cert-header">
+              <div class="cert-badge">🛡</div>
+              <span class="cert-status cert-done">Obtenu</span>
+            </div>
+            <h3>SensCyber</h3>
+            <p class="cert-org">ANSSI / Cybermalveillance.gouv.fr</p>
+            <p>Bons réflexes de cybersécurité et prévention des risques numériques.</p>
+          </article>
+          <article class="cert-card" id="cert-cnil">
+            <div class="cert-header">
+              <div class="cert-badge">🔒</div>
+              <span class="cert-status cert-done">Obtenu</span>
+            </div>
+            <h3>CNIL – Protection des données</h3>
+            <p class="cert-org">CNIL</p>
+            <p>Enjeux RGPD et respect de la vie privée en contexte numérique.</p>
+          </article>
+          <article class="cert-card" id="cert-anssi">
+            <div class="cert-header">
+              <div class="cert-badge">🇫🇷</div>
+              <span class="cert-status cert-done">Obtenu</span>
+            </div>
+            <h3>ANSSI – Sécurité numérique</h3>
+            <p class="cert-org">ANSSI</p>
+            <p>Réflexes essentiels de sécurité et sensibilisation aux menaces cyber.</p>
+          </article>
+          <article class="cert-card" id="cert-cisco">
+            <div class="cert-header">
+              <div class="cert-badge">🌐</div>
+              <span class="cert-status cert-progress">En cours</span>
+            </div>
+            <h3>Cisco Networking</h3>
+            <p class="cert-org">Cisco NetAcad</p>
+            <p>Approfondissement des compétences réseau, routage et configuration.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== VEILLE ========== -->
+    <section id="veille" class="section">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-number">06</span>
+          <h2 class="section-title">Veille Informationnelle</h2>
+        </div>
+        <div class="veille-grid" data-aos>
+
+          <article class="veille-card" id="veille-cyber">
+            <div class="veille-card-header">
+              <div class="veille-icon-wrap">🔍</div>
+              <div class="veille-badge">● Active</div>
+            </div>
+            <h3>Cybersécurité</h3>
+            <p>Surveillance active des vulnérabilités, attaques émergentes, correctifs de sécurité et bonnes pratiques défensives. Suivi des CVE critiques et des bulletins d'alerte officiels.</p>
+            <div class="veille-topics">
+              <span>Vulnérabilités CVE</span>
+              <span>Ransomwares</span>
+              <span>Phishing</span>
+              <span>Zero-day</span>
+              <span>Pentest</span>
+            </div>
+            <div class="veille-divider"></div>
+            <div class="veille-sources-label">Sources utilisées</div>
+            <div class="veille-sources">
+              <a href="https://www.cert.ssi.gouv.fr/" target="_blank" rel="noopener" class="veille-source-link">🇫🇷 CERT-FR / ANSSI</a>
+              <a href="https://thehackernews.com/" target="_blank" rel="noopener" class="veille-source-link">📰 The Hacker News</a>
+              <a href="https://krebsonsecurity.com/" target="_blank" rel="noopener" class="veille-source-link">🔐 Krebs on Security</a>
+            </div>
+          </article>
+
+          <article class="veille-card" id="veille-reseau">
+            <div class="veille-card-header">
+              <div class="veille-icon-wrap">🌐</div>
+              <div class="veille-badge">● Active</div>
+            </div>
+            <h3>Réseaux &amp; Systèmes</h3>
+            <p>Administration Windows/Linux, architectures réseau, virtualisation, outils de supervision et nouvelles technologies d'infrastructure IT.</p>
+            <div class="veille-topics">
+              <span>Linux / Windows</span>
+              <span>Virtualisation</span>
+              <span>Cloud</span>
+              <span>Supervision</span>
+              <span>Cisco</span>
+            </div>
+            <div class="veille-divider"></div>
+            <div class="veille-sources-label">Sources utilisées</div>
+            <div class="veille-sources">
+              <a href="https://www.netacad.com/" target="_blank" rel="noopener" class="veille-source-link">🌐 Cisco NetAcad</a>
+              <a href="https://www.linux.org/" target="_blank" rel="noopener" class="veille-source-link">🐧 Linux.org</a>
+              <a href="https://www.vmware.com/" target="_blank" rel="noopener" class="veille-source-link">☁️ VMware Blog</a>
+            </div>
+          </article>
+
+          <article class="veille-card" id="veille-geopo">
+            <div class="veille-card-header">
+              <div class="veille-icon-wrap">🌍</div>
+              <div class="veille-badge">● Active</div>
+            </div>
+            <h3>Cyberpolitique &amp; Géopolitique</h3>
+            <p>Suivi des enjeux géopolitiques liés au cyberespace, conflits numériques, souveraineté des données et politiques de cyberdéfense nationales et internationales.</p>
+            <div class="veille-topics">
+              <span>Cyberdéfense</span>
+              <span>Souveraineté</span>
+              <span>Conflits cyber</span>
+              <span>RGPD</span>
+              <span>Géopolitique</span>
+            </div>
+            <div class="veille-divider"></div>
+            <div class="veille-sources-label">Sources utilisées</div>
+            <div class="veille-sources">
+              <a href="https://www.sgdsn.gouv.fr/" target="_blank" rel="noopener" class="veille-source-link">🛡️ SGDSN</a>
+              <a href="https://www.ssi.gouv.fr/" target="_blank" rel="noopener" class="veille-source-link">🇫🇷 ANSSI</a>
+              <a href="https://www.courrierinternational.com/" target="_blank" rel="noopener" class="veille-source-link">📰 Courrier International</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <span class="section-number">07</span>
+          <h2 class="section-title">Contact</h2>
+        </div>
+        <div class="contact-grid" data-aos>
+          <div class="contact-info">
+            <p class="contact-intro">Vous avez un projet, une opportunité de stage ou d'alternance ? N'hésitez pas à me contacter !</p>
+            <div class="contact-links">
+              <a href="cv/CV ATS 1.pdf" target="_blank" class="contact-link" id="contact-cv">
+                <span class="contact-link-icon">📄</span>
+                Télécharger mon CV
+              </a>
+              <a href="https://linkedin.com/in/rita-rabia-aa9246355" target="_blank" rel="noopener" class="contact-link contact-link-linkedin" id="contact-linkedin">
+                <span class="contact-link-icon">💼</span>
+                LinkedIn · Rita Rabia
+              </a>
+              <a href="https://github.com/jebliya" target="_blank" rel="noopener" class="contact-link contact-link-github" id="contact-github">
+                <span class="contact-link-icon">💻</span>
+                GitHub · jebliya
+              </a>
+            </div>
+          </div>
+          <!-- FORMULAIRE DE CONTACT FONCTIONNEL VIA FORMSUBMIT -->
+          <form class="contact-form" action="https://formsubmit.co/REMPLACE_CECI_PAR_TON_EMAIL@gmail.com" method="POST" id="contactForm">
+            <!-- ⚠️ RITA: Ligne ci-dessus : Remplace "REMPLACE_CECI_PAR_TON_EMAIL@gmail.com" par TA VRAIE ADRESSE EMAIL (ex: rita.rabia@gmail.com) -->
+            <input type="hidden" name="_subject" value="Nouveau message depuis ton Portfolio !">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <!-- <input type="hidden" name="_next" value="https://ton-portfolio.com/merci.html"> (Optionnel : page de remerciement) -->
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">Nom</label>
+                <input type="text" id="f-name" name="Nom" placeholder="Votre nom" required>
+              </div>
+              <div class="form-group">
+                <label for="f-email">Email</label>
+                <input type="email" id="f-email" name="Email" placeholder="votre@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-subject">Objet</label>
+              <input type="text" id="f-subject" name="Objet" placeholder="Sujet de votre message">
+            </div>
+            <div class="form-group">
+              <label for="f-message">Message</label>
+              <textarea id="f-message" name="Message" rows="5" placeholder="Votre message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="btn-send">
+              Envoyer le message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div id="form-success" class="form-success hidden">✅ Le message va être envoyé ! (Vérifiez votre boîte mail pour la première activation)</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">Rita Rabia</div>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/rita-rabia-aa9246355" target="_blank" rel="noopener" id="footer-linkedin">LinkedIn</a>
+        <span>·</span>
+        <a href="https://github.com/jebliya" target="_blank" rel="noopener" id="footer-github">GitHub</a>
+      </div>
+      <p class="footer-sub">BTS SIO SISR · Cybersécurité · Réseaux</p>
+      <p class="footer-copy">© 2026 · Rita Rabia</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
